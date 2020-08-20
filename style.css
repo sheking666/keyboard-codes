@@ -1,6 +1,125 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
     background-color: #252525;
-    color: #e2e2e2;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(/img/escheresque_ste.png);
+    color: #888888;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+}
+
+.container {
+    width: 1000px;
+    display: block;
+    background-color: #1d1d1d;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.header {
+    height: auto;
+    /* unnecessary */
+}
+
+.header>h1 {
+    font-size: 46px;
+    font-family: 'VT323', monospace;
+    padding: 0;
+    margin: 0;
     text-align: center;
+    text-transform: uppercase;
+}
+
+.keyboard {
+    height: 500px;
+    /* unnecessary */
+}
+
+.keyboard-keys {
+    margin: 20px;
+}
+
+.btn {
+    width: 52px;
+    height: 50px;
+    margin: 3px;
+    padding: 0;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #888888;
+    border-radius: 5px;
+    display: block;
+    float: left;
+}
+
+.btn p {
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 3px;
+    margin-left: 6px;
+}
+
+.btn-backtick {
+    width: 80px;
+}
+
+.btn-backspace {
+    width: 116px;
+}
+
+.btn-tab {
+    width: 105px;
+}
+
+.tab-arrows {
+    margin-top: 3px;
+    float: left;
+}
+
+.tab-arrows p {
+    line-height: 0.45;
+}
+
+.tab-name {
+    float: left;
+    margin-left: 4px;
+}
+
+.btn-backslash {
+    width: 91px;
+}
+
+.btn-caps {
+    width: 120px;
+}
+
+.btn-enter {
+    width: 138px;
+}
+
+.btn-shift {
+    width: 140px;
+}
+
+.shift-arrow {
+    float: left;
+}
+
+.shift-arrow p {
+    margin-top: 2px;
+}
+
+.shift-name {
+    float: left;
+}
+
+.footer {
+    height: 20px;
+    /* unnecessary */
 }
