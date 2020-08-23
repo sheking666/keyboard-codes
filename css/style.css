@@ -4,17 +4,33 @@
 body {
     background-color: #252525;
     background-image: url(/img/escheresque_ste.png);
-    color: #888888;
+    color: #bbbbbb;
     font-family: 'Source Code Pro', monospace;
     font-size: 16px;
+}
+
+a:link {
+    color: #bbbbbb;
+}
+
+a:visited {
+    color: #bbbbbb;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+.clearfix {
+    clear: both;
 }
 
 .container {
     width: 1000px;
     display: block;
     background-color: #1d1d1d;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: auto;
@@ -23,26 +39,24 @@ body {
 }
 
 .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 34px;
+    font-family: 'VT323', monospace;
+}
+
+.title {
+    margin-left: 20px;
+}
+
+.keyboard {
     height: auto;
     /* unnecessary */
 }
 
-.header>h1 {
-    font-size: 46px;
-    font-family: 'VT323', monospace;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.keyboard {
-    height: 500px;
-    /* unnecessary */
-}
-
 .keyboard-keys {
-    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .btn {
@@ -52,7 +66,7 @@ body {
     padding: 0;
     border-style: solid;
     border-width: 2px;
-    border-color: #888888;
+    border-color: #bbbbbb;
     border-radius: 5px;
     display: block;
     float: left;
@@ -63,6 +77,41 @@ body {
     line-height: 1.3;
     margin-top: 3px;
     margin-left: 6px;
+}
+
+.title>.btn {
+    width: 58px;
+}
+
+.btn-red {
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+.btn-green {
+    border-color: #158000;
+    color: #158000;
+}
+
+.btn-yellow {
+    border-color: #ddbc00;
+    color: #ddbc00;
+}
+
+.btn-purple {
+    border-color: #ab00c2;
+    color: #ab00c2;
+}
+
+.btn-blue {
+    border-color: #0059ff;
+    color: #0059ff;
+}
+
+.btn-empty {
+    border-style: none;
+    margin-left: 9px;
+    margin-right: 9px;
 }
 
 .btn-backtick {
@@ -103,8 +152,8 @@ body {
     width: 138px;
 }
 
-.btn-shift {
-    width: 140px;
+.btn-lshift {
+    width: 150px;
 }
 
 .shift-arrow {
@@ -119,7 +168,44 @@ body {
     float: left;
 }
 
+.btn-rshift {
+    width: 170px;
+}
+
+.btn-lctrl {
+    width: 100px;
+}
+
+.btn-alt {
+    width: 70px;
+}
+
+.btn-space {
+    width: 408px;
+}
+
+.btn-rctrl {
+    width: 76px;
+}
+
+.codes {
+    
+}
+
 .footer {
-    height: 20px;
-    /* unnecessary */
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+}
+
+.footer-text {
+    display: inline-block;
+}
+
+.footer-socials {
+    border-left-style: solid;
+    border-width: 2px;
+    margin-left: 10px;
+    padding-left: 20px;
+    display: inline-block;
 }
