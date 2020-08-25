@@ -49,11 +49,6 @@ a:hover {
     margin-left: 20px;
 }
 
-.keyboard {
-    height: auto;
-    /* unnecessary */
-}
-
 .keyboard-keys {
     margin-left: 20px;
     margin-right: 20px;
@@ -188,8 +183,38 @@ a:hover {
     width: 76px;
 }
 
-.codes {
-    
+.btn-win p {
+    font-size: 23px;
+    margin-left: 10px;
+    margin-top: 9px;
+}
+
+.code-cell {
+    width: 221px;
+    height: 80px;
+    margin-left: 20px;
+    padding: 0;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #bbbbbb;
+    border-radius: 5px;
+    display: block;
+    float: left;
+}
+
+.code-name {
+    background-color: #464646;
+    color: #dbdbdb;
+    text-shadow: 1px 1px #1d1d1d;
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding: 2px;
+}
+
+.code {
+    margin-top: 15px;
+    text-align: center;
 }
 
 .footer {
