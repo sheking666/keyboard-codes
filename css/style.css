@@ -65,6 +65,7 @@ a:hover {
     border-radius: 5px;
     display: block;
     float: left;
+    transition: all 70ms ease-in-out;
 }
 
 .btn p {
@@ -185,8 +186,12 @@ a:hover {
 
 .btn-win p {
     font-size: 23px;
-    margin-left: 10px;
-    margin-top: 9px;
+    margin: 9px;
+}
+
+.keyboard-keys>.btn:hover {
+    box-shadow: 0 0 7px #bbbbbb;
+    background-color: #2b2b2b;
 }
 
 .code-cell {
