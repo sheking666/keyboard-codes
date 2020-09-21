@@ -1,24 +1,28 @@
-// Script for animating colors in an element using jQuery Color (https://github.com/jquery/jquery-color)
-// A random color is picked from the palette and applied to this element
+import jQuery from 'jquery';
+import 'jquery-color';
 
-(function colorElement() {
+window.$ = window.jQuery = jQuery;
+
+export default function () {
     const element = '.keyboard-keys>.btn';
     const colors = ['#ff0000', '#158000', '#ddbc00', '#ab00c2', '#0059ff'];
     const defaultColor = '#bbbbbb';
     let currentColor = colors[0];
 
-    $(element).hover(function () {
+    $(element).on('mouseenter', function () {
         currentColor = colors[Math.floor(Math.random() * colors.length)];
 
         $(this).animate({
             borderColor: currentColor,
             color: currentColor,
-        }, 50);
+        }, 35);
 
-    }, function () {
+    }).on('mouseleave', function () {
+        currentColor = defaultColor;
+
         $(this).animate({
-            borderColor: defaultColor,
-            color: defaultColor,
-        }, 50);
+            borderColor: currentColor,
+            color: currentColor,
+        }, 35);
     });
-})();
+};

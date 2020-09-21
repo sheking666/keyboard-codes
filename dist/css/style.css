@@ -65,7 +65,7 @@ a:hover {
     border-radius: 5px;
     display: block;
     float: left;
-    transition: all 70ms ease-in-out;
+    transition: all 35ms ease-in-out;
 }
 
 .btn p {
