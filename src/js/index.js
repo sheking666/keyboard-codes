@@ -1,25 +1,46 @@
 import { elements } from './views/base';
-import colorElement from './views/colorElement'
-import * as buttonCodesView from './views/buttonCodesView'
+import colorElement from './views/colorElement';
+import ClickCodes from './models/ClickCodes';
+import * as codesView from './views/codesView';
 import jQuery from 'jquery';
 import 'jquery-color';
 
+// ------------- JQUERY INIT -------------
 window.$ = window.jQuery = jQuery;
 
-// If codes are displayed
-let codesState = false;
-
-// ONLOAD button color animation
+// ------------- BUTTON COLOR ANIMATION -------------
 $(colorElement());
 
-// Keyboard keys controller
-$(document).on('keydown', event => {
-    event.preventDefault();
+// ------------- CODES DISPLAY CONTROLLER -------------
+let codesState = false;
+const showCodes = e => {
     if (!codesState) {
         codesState = true;
-        buttonCodesView.renderCodeTable(event);
+        codesView.renderCodeTable(e);
     } else {
-        buttonCodesView.deleteCodeTable();
-        buttonCodesView.renderCodeTable(event);
+        codesView.deleteCodeTable();
+        codesView.renderCodeTable(e);
+    }
+};
+
+// ------------- CLIPBOARD CONTROLLER -------------
+// some code
+
+
+// ------------- EVENT LISTENERS -------------
+$(document).on('keydown', event => {
+    event.preventDefault();
+    showCodes(event);
+});
+
+$(elements.keyboardContainer).on('click', event => {
+    try {
+        const id = event.target.closest(elements.button).id;
+        if (id) {
+            const e = new ClickCodes(id).codesEventGenerator();
+            showCodes(e);
+        }
+    } catch (error) {
+        console.log('You clicked on an empty space on the keyboard.');
     }
 });
