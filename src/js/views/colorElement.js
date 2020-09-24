@@ -1,28 +1,25 @@
-import { elements } from './base';
 import jQuery from 'jquery';
 import 'jquery-color';
 
 window.$ = window.jQuery = jQuery;
 
-export default function () {
+const animateElement = (el, curColor) => {
+    $(el).animate({
+        borderColor: curColor,
+        color: curColor,
+    }, 35);
+};
+
+export default function (el) {
     const colors = ['#ff0000', '#158000', '#ddbc00', '#ab00c2', '#0059ff'];
     const defaultColor = '#bbbbbb';
     let currentColor = colors[0];
 
-    $(elements.keyboardButton).on('mouseenter', function () {
+    $(el).on('mouseenter', function () {
         currentColor = colors[Math.floor(Math.random() * colors.length)];
-
-        $(this).animate({
-            borderColor: currentColor,
-            color: currentColor,
-        }, 35);
-
+        animateElement(this, currentColor);
     }).on('mouseleave', function () {
         currentColor = defaultColor;
-
-        $(this).animate({
-            borderColor: currentColor,
-            color: currentColor,
-        }, 35);
+        animateElement(this, currentColor);
     });
 };
