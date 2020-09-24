@@ -11,14 +11,17 @@ body {
 
 a:link {
     color: #bbbbbb;
+    text-decoration: none;
 }
 
 a:visited {
     color: #bbbbbb;
+    text-decoration: none;
 }
 
 a:hover {
     color: #ffffff;
+    text-decoration: none;
 }
 
 .clearfix {
@@ -189,7 +192,7 @@ a:hover {
     margin: 9px;
 }
 
-.keyboard-keys>.btn:hover {
+.keyboard-keys>a>.btn:hover {
     box-shadow: 0 0 7px #bbbbbb;
     background-color: #2b2b2b;
 }
@@ -205,6 +208,12 @@ a:hover {
     border-radius: 5px;
     display: block;
     float: left;
+    transition: all 50ms ease-in-out;
+}
+
+.code-cell:hover {
+    box-shadow: 0 0 7px #bbbbbb;
+    background-color: #2b2b2b;
 }
 
 .code-name {

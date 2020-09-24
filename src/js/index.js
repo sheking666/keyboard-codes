@@ -9,7 +9,7 @@ import 'jquery-color';
 window.$ = window.jQuery = jQuery;
 
 // ------------- BUTTON COLOR ANIMATION -------------
-$(colorElement());
+$(colorElement(elements.keyboardButton));
 
 // ------------- CODES DISPLAY CONTROLLER -------------
 let codesState = false;
@@ -24,7 +24,15 @@ const showCodes = e => {
 };
 
 // ------------- CLIPBOARD CONTROLLER -------------
-// some code
+const controlCopy = text => {
+    const el = document.createElement('textarea');
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    console.log(`${text} copied to clipboard.`);
+};
 
 
 // ------------- EVENT LISTENERS -------------
@@ -33,14 +41,27 @@ $(document).on('keydown', event => {
     showCodes(event);
 });
 
-$(elements.keyboardContainer).on('click', event => {
+$(elements.keyboardContainer).on('click', e => {
     try {
-        const id = event.target.closest(elements.button).id;
+        const id = e.target.closest(elements.button).id;
         if (id) {
             const e = new ClickCodes(id).codesEventGenerator();
             showCodes(e);
         }
     } catch (error) {
-        console.log('You clicked on an empty space on the keyboard.');
+
+    }
+});
+
+$(elements.main).on('click', e => {
+    try {
+        const code = e.target.closest(elements.codeCell).innerHTML;
+        if (code) {
+            let codeHtml = $.parseHTML(code);
+            const text = codeHtml[3].innerText;
+            controlCopy(text);
+        }
+    } catch (error) {
+
     }
 });

@@ -1,7 +1,9 @@
 export const elements = {
     keyboardContainer: '.container.keyboard',
     containerCodes: '.container.codes',
-    keyboardButton: '.keyboard-keys>.btn',
+    keyboardButton: '.keyboard-keys>a>.btn',
     keyboardKeys: '.keyboard-keys',
-    button: '.btn'
+    codeCell: '.code-cell',
+    button: '.btn',
+    main: '.main'
 };
