@@ -43,7 +43,7 @@ export default class ClickCodes {
             ['74', 'j', '74', 'KeyJ'],
             ['75', 'k', '75', 'KeyK'],
             ['76', 'l', '76', 'KeyL'],
-            ['186', ';', '786', 'Semicolon'],
+            ['186', ';', '186', 'Semicolon'],
             ['222', '\'', '222', 'Quote'],
             ['13', 'Enter', '13', 'Enter'],
             ['16', 'Shift', '16', 'ShiftLeft'],
